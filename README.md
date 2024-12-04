@@ -6,10 +6,15 @@ Untar the model_files_and_dataset.tar.gz using command below
 tar -zxvf model_files_and_dataset.tar.gz
 
 model_files_and_dataset/
+
 ├── c_to_ir_model        # Model and related files for translating C code to LLVM IR.
+
 ├── evaluation_codes     # Scripts and resources used for evaluating the performance of models.
+
 ├── ir_to_ir_model       # Model and resources for transforming or optimizing LLVM IR representations.
+
 ├── ir_to_rust_model     # Model and resources for converting LLVM IR to Rust code.
+
 
 Each directory contains the dataset file associated with the respective model along with the training file. 
 

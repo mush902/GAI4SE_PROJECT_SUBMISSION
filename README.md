@@ -1,5 +1,37 @@
 # GAI4SE_PROJECT_SUBMISSION
 
+
+Untar the model_files_and_dataset.tar.gz using command below
+
+tar -zxvf model_files_and_dataset.tar.gz
+
+model_files_and_dataset/
+├── c_to_ir_model        # Model and related files for translating C code to LLVM IR.
+├── evaluation_codes     # Scripts and resources used for evaluating the performance of models.
+├── ir_to_ir_model       # Model and resources for transforming or optimizing LLVM IR representations.
+├── ir_to_rust_model     # Model and resources for converting LLVM IR to Rust code.
+
+Each directory contains the dataset file associated with the respective model along with the training file. 
+
+To train the model run below 
+
+python <train_file_name>.py 
+
+This will generate the best model in the same directory. 
+
+
+The dataset used to train the model looks like below:
+
+[
+  {
+    "c_code": < >
+    "c_ir": < >
+    "rust_code": < >
+    "rust_ir": < >
+  }
+]
+
+
 The directory auxillary_codes contains scripts and utilities for processing datasets of C source code, LLVM Intermediate Representation (IR), and Rust source code. The workflow involves downloading the C dataset, generating Rust code using RustC, generating IR from the C and Rust source code using clang++ and RustC. This is followed by extracting function definitions, demangling function names, and creating a structured dataset for further analysis. Below is an overview of the provided files and their functionality.
 
 
